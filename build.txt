@@ -1,0 +1,10 @@
+author = beeyang
+version = 0.9.1
+displayName = owangMod
+homepage = http://forums.terraria.org/index.php?threads/1-3-tmodloader-a-modding-api.23726/
+hideCode = true
+hideResources = false
+includeSource = false
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = false
+languageVersion = 6
