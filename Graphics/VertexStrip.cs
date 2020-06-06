@@ -73,7 +73,7 @@ namespace Terraria.Graphics
                     int num1 = (int)((double)Math.Abs(MathHelper.WrapAngle(f2 - f1)) / 0.261799395084381);
                     if (num1 != 0)
                     {
-                        float num2 = position1.Distance(position2);
+                        float num2 = Vector2.Distance(position1, position2);
                         Vector2 vector2_1 = position1 + f1.ToRotationVector2() * num2;
                         Vector2 vector2_2 = position2 + f2.ToRotationVector2() * -num2;
                         float num3 = 1f / (float)(num1 + 2);
@@ -81,7 +81,8 @@ namespace Terraria.Graphics
                         for (float amount = num3; (double)amount < 1.0; amount += num3)
                         {
                             Vector2 Origin = Vector2.CatmullRom(vector2_1, position1, position2, vector2_2, amount);
-                            float num4 = MathHelper.WrapAngle(Origin.DirectionTo(Target).ToRotation());
+                            //float num4 = MathHelper.WrapAngle(Origin.DirectionTo(Target).ToRotation());
+                            float num4 = MathHelper.WrapAngle(Hsmod.Utils.Utils.DirectionTo(Origin, Target).ToRotation());
                             this._temporaryPositionsCache.Add(Origin);
                             this._temporaryRotationsCache.Add(num4);
                             Target = Origin;

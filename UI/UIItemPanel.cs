@@ -5,6 +5,7 @@ using Terraria.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Hsmod.Items;
+using ReLogic.Graphics;
 
 namespace Hsmod.UI
 {
@@ -90,11 +91,11 @@ namespace Hsmod.UI
 
             if (base.IsMouseHovering)
             {
-                Main.hoverItemName = item.name;
-                Main.toolTip = item.Clone();
-                Main.toolTip.GetModInfo<HsmodItemInfo>(Hsmod.instance).addValueTooltip = true;
+                Main.hoverItemName = item.Name;
+                //Main.toolTip = item.Clone();
+                //Main.toolTip.GetModInfo<HsmodItemInfo>(Hsmod.instance).addValueTooltip = true;
                 //ItemValue value = new ItemValue().SetFromCopperValue(item.value*item.stack);
-                Main.toolTip.name = $"{Main.toolTip.name}{Main.toolTip.modItem?.mod.Name.Insert((int)Main.toolTip.modItem?.mod.Name.Length, "]").Insert(0, " [")}";
+                //Main.toolTip.name = $"{Main.toolTip.name}{Main.toolTip.modItem?.mod.Name.Insert((int)Main.toolTip.modItem?.mod.Name.Length, "]").Insert(0, " [")}";
             }
 
             CalculatedStyle innerDimensions = base.GetInnerDimensions();

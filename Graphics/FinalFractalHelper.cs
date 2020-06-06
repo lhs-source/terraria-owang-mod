@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.Graphics;
 using Terraria;
-using Hsmod.util;
+using Hsmod.Utils;
 
 namespace Hsmod.Graphics
 {
@@ -142,7 +142,7 @@ namespace Hsmod.Graphics
 
         private Color StripColors(float progressOnStrip)
         {
-            Color color = Color.Lerp(Color.White, Color.Violet, util.Utils.GetLerpValue(0.0f, 0.7f, progressOnStrip, true)) * (1f - util.Utils.GetLerpValue(0.0f, 0.98f, progressOnStrip, false));
+            Color color = Color.Lerp(Color.White, Color.Violet, Utils.Utils.GetLerpValue(0.0f, 0.7f, progressOnStrip, true)) * (1f - Utils.Utils.GetLerpValue(0.0f, 0.98f, progressOnStrip, false));
             color.A /= (byte)2;
             return color;
         }
@@ -191,7 +191,7 @@ namespace Hsmod.Graphics
 
             private Color StripColors(float progressOnStrip)
             {
-                Color color = this.trailColor * (1f - util.Utils.GetLerpValue(0.0f, 0.98f, progressOnStrip, false));
+                Color color = this.trailColor * (1f - Utils.Utils.GetLerpValue(0.0f, 0.98f, progressOnStrip, false));
                 color.A /= (byte)2;
                 return color;
             }

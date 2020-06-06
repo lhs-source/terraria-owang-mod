@@ -11,7 +11,7 @@ namespace Hsmod.projectile.soles
     {
         public override void SetDefaults()
         {
-            projectile.name = "ExamSkyFracture";
+            ////projectile.name = "ExamSkyFracture";
             projectile.width = 64;
             projectile.height = 64;
             projectile.aiStyle = 0;

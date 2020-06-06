@@ -35,5 +35,6 @@ namespace Hsmod.Items
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
+
 	}
 }

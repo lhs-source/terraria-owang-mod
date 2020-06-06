@@ -15,7 +15,7 @@ namespace Hsmod.projectile
         bool set;
         public override void SetDefaults()
         {
-            projectile.name = "SwordEffect1";
+            //projectile.name = "SwordEffect1";
             projectile.width = 300;
             projectile.height = 300;
             projectile.timeLeft = 40;

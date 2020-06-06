@@ -12,7 +12,7 @@ namespace Hsmod.projectile
         bool set = false;
         public override void SetDefaults()
         {
-            projectile.name = "ExamOnyxBlaster";
+            //projectile.name = "ExamOnyxBlaster";
             projectile.width = 10;
             projectile.height = 10;
             projectile.alpha = 255;

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hsmod.util
+namespace Hsmod.Utils
 {
     class Utils
     {
@@ -28,6 +29,11 @@ namespace Hsmod.util
                 }
             }
             return (float)(((double)t - (double)from) / ((double)to - (double)from));
+        }
+
+        public static Vector2 DirectionTo(Vector2 Source, Vector2 Destination)
+        {
+            return Vector2.Normalize(Destination - Source);
         }
     }
 }

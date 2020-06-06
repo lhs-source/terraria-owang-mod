@@ -13,7 +13,7 @@ namespace Hsmod.projectile
         float damRate;
         public override void SetDefaults()
         {
-            projectile.name = "SwordEffect3";
+            //projectile.name = "SwordEffect3";
             projectile.scale = 1.3f;
             projectile.width = (int)(595 / projectile.scale);
             projectile.height = (int)(523 / projectile.scale);

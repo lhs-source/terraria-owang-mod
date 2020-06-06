@@ -12,7 +12,7 @@ namespace Hsmod.projectile
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.InfluxWaver);
-            projectile.name = "ExamStarfury";
+            //projectile.name = "ExamStarfury";
             //aiType = ProjectileID.InfluxWaver;
             
             /*

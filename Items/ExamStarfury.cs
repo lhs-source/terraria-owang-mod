@@ -10,7 +10,7 @@ namespace Hsmod.Items
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.SkyFracture);
-            item.name = "ExamStarfury";
+            //item.name = "ExamStarfury";
             item.shoot = 660;
             item.shootSpeed = 10f;
             /*

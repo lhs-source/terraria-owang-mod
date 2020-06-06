@@ -12,7 +12,7 @@ namespace Hsmod.projectile
         bool set = false;
         public override void SetDefaults()
         {
-            projectile.name = "ExamSkyFracture";
+            //projectile.name = "ExamSkyFracture";
             projectile.width = 64;
             projectile.height = 64;
             projectile.aiStyle = 0;
@@ -152,7 +152,7 @@ namespace Hsmod.projectile
             }
            
             DelegateMethods.v3_1 = new Vector3(0.6f, 1f, 1f) * 0.2f;
-            Utils.PlotTileLine(projectile.Center, projectile.Center + projectile.velocity * 10f, 8f, new Utils.PerLinePoint(DelegateMethods.CastLightOpen));
+            Terraria.Utils.PlotTileLine(projectile.Center, projectile.Center + projectile.velocity * 10f, 8f, new Terraria.Utils.PerLinePoint(DelegateMethods.CastLightOpen));
             if (projectile.alpha > 0)
             {
                 //Main.PlaySound(2, projectile.Center, 79);

@@ -11,7 +11,7 @@ namespace Hsmod.projectile
     {
         public override void SetDefaults()
         {
-            projectile.name = "SecondEffectHit";
+            //projectile.name = "SecondEffectHit";
             projectile.width = 350;
             projectile.height = 337;
             projectile.timeLeft = 50;

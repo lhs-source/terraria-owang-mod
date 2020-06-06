@@ -14,7 +14,7 @@ namespace Hsmod.Items
     {
         public override void SetDefaults()
         {
-            item.name = "ExamStarfury";
+            //item.name = "ExamStarfury";
 
             item.noMelee = true;
             item.autoReuse = true;

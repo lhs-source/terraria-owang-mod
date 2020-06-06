@@ -11,7 +11,7 @@ namespace Hsmod.projectile
     {
         public override void SetDefaults()
         {
-            projectile.name = "SizeEffect";
+            //projectile.name = "SizeEffect";
             projectile.scale = 2;
             projectile.width = 144 / 2;
             projectile.height = 144 / 2;

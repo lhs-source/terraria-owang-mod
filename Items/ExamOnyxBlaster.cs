@@ -10,7 +10,7 @@ namespace Hsmod.Items
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.OnyxBlaster);
-            item.name = "ExamOnyxBlaster";
+            //item.name = "ExamOnyxBlaster";
             item.shoot = mod.ProjectileType("ExamOnyxBlaster");
 
             item.width = 33;

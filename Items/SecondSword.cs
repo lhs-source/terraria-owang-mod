@@ -9,14 +9,14 @@ namespace Hsmod.Items
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Second Sword";
+			//item.name = "Second Sword";
 			item.damage = 100;
 			item.melee = true;
 			item.width = 63;
 			item.height = 85;
             //item.Bottom = new Vector2(5, 5);
             item.Center = new Vector2(9, 82);
-            item.toolTip = "Owang..!";
+            //item.toolTip = "Owang..!";
 			item.useTime = 20;
 			item.useAnimation = 20;
 			item.useStyle = 1;
