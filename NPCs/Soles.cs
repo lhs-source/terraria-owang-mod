@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria.UI.Chat;
 using Terraria.UI;
 using System.Text;
+using ReLogic.Graphics;
 
 namespace Hsmod.NPCs
 {
@@ -17,7 +18,7 @@ namespace Hsmod.NPCs
         int oldCnt;
         public override void SetDefaults()
         {
-            npc.name = "Soles";
+            //npc.name = "Soles";
             npc.width = 67;
             npc.height = 125;
             //npc.aiStyle = 84;

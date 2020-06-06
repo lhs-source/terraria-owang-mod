@@ -13,23 +13,23 @@ namespace Hsmod.Items
     {
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            var info = item.GetModInfo<HsmodItemInfo>(Hsmod.instance);
-            if (info.addValueTooltip)
-            {
-                ItemValue value = new ItemValue().SetFromCopperValue(item.value * item.stack).ToSellValue();
-                tooltips[0].text += $"{value.ToTagString()}";
-            }
+            //var info = item.GetModInfo<HsmodItemInfo>(Hsmod.instance);
+            //if (info.addValueTooltip)
+            //{
+            //    ItemValue value = new ItemValue().SetFromCopperValue(item.value * item.stack).ToSellValue();
+            //    tooltips[0].text += $"{value.ToTagString()}";
+            //}
         }
     }
-    public class HsmodItemInfo : ItemInfo
-    {
-        public bool addValueTooltip = false;
+    //public class HsmodItemInfo : ItemInfo
+    //{
+    //    public bool addValueTooltip = false;
 
-        public override ItemInfo Clone()
-        {
-            var clone = new HsmodItemInfo();
-            clone.addValueTooltip = this.addValueTooltip;
-            return clone;
-        }
-    }
+    //    public override ItemInfo Clone()
+    //    {
+    //        var clone = new HsmodItemInfo();
+    //        clone.addValueTooltip = this.addValueTooltip;
+    //        return clone;
+    //    }
+    //}
 }
