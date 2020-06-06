@@ -10,9 +10,9 @@ namespace Hsmod.Items
         public override void SetDefaults()
         {
             // name
-            item.name = "Zenith";
+            //item.name = "Zenith";
             item.shoot = mod.ProjectileType("Zenith");
-            item.toolTip = "This is just copy of Zenith..";
+            //item.toolTip = "This is just copy of Zenith..";
 
             // image
             item.width = 24;

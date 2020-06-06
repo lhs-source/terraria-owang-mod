@@ -1,5 +1,4 @@
-﻿using Hsmod.Graphics;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
@@ -15,7 +14,7 @@ namespace Hsmod.projectile
         public override void SetDefaults()
         {
             // name
-            projectile.name = "Zenith";
+            //projectile.name = "Zenith";
             projectile.width = 32;
             projectile.height = 32;
             projectile.aiStyle = 0;
@@ -107,7 +106,7 @@ namespace Hsmod.projectile
                 }
                 if (num1 < 1.0)
                 {
-                    FinalFractalHelper.FinalFractalProfile finalFractalProfile = FinalFractalHelper.GetFinalFractalProfile((int)projectile.ai[1]);
+                    Graphics.FinalFractalHelper.FinalFractalProfile finalFractalProfile = Graphics.FinalFractalHelper.GetFinalFractalProfile((int)projectile.ai[1]);
                     Vector2 rotationVector2 = (projectile.rotation - 1.570796f).ToRotationVector2();
                     Vector2 center = projectile.Center;
                     int num7 = (int)((double)(1 + (int)((double)projectile.velocity.Length() / 100.0)) * (double)util.Utils.GetLerpValue(0.0f, 0.5f, lerpValue2, true) * (double)util.Utils.GetLerpValue(1f, 0.5f, lerpValue2, true));

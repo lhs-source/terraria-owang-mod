@@ -13,7 +13,7 @@ namespace Hsmod.Items
     {
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            var info = item.GetModInfo<OwangItemInfo>(Hsmod.instance);
+            var info = item.GetModInfo<HsmodItemInfo>(Hsmod.instance);
             if (info.addValueTooltip)
             {
                 ItemValue value = new ItemValue().SetFromCopperValue(item.value * item.stack).ToSellValue();
@@ -27,7 +27,7 @@ namespace Hsmod.Items
 
         public override ItemInfo Clone()
         {
-            var clone = new OwangItemInfo();
+            var clone = new HsmodItemInfo();
             clone.addValueTooltip = this.addValueTooltip;
             return clone;
         }

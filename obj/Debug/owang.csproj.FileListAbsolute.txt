@@ -1,3 +1,0 @@
-D:\game\스팀_테라리아\tool\Tmodloader\1.3.3.2\mymod\owang\bin\Debug\owang.exe.config
-D:\game\스팀_테라리아\tool\Tmodloader\1.3.4.4\mymod\owang\bin\Debug\owang.exe.config
-D:\game\스팀_테라리아\tool\Tmodloader\1.3.4.4\mymod\owang\obj\Debug\owang.csprojResolveAssemblyReference.cache
