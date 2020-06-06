@@ -9,7 +9,7 @@ using Terraria.UI.Chat;
 using Terraria.UI;
 using System.Text;
 
-namespace owang.NPCs
+namespace Hsmod.NPCs
 {
     class Soles : ModNPC
     {

@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace owang.Items
+namespace Hsmod.Items
 {
 	public class SecondSword : ModItem
 	{

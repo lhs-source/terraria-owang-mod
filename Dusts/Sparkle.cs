@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace owang.Dusts
+namespace Hsmod.Dusts
 {
     class Sparkle : ModDust
     {

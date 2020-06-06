@@ -6,15 +6,18 @@ using Terraria.DataStructures;
 using Terraria;
 using System.Collections.Generic;
 
-namespace owang
+namespace Hsmod
 {
-	class owang : Mod
+	class Hsmod : Mod
     {
         UserInterface exchangeUIF;
         public ExchangeUI exchangeUI;
-        internal static owang instance;
+        internal static Hsmod instance;
 
-        public owang()
+        public static float GlobalTimeWrappedHourly;
+        public static SpriteViewMatrix GameViewMatrix;
+
+        public Hsmod()
 		{
 			Properties = new ModProperties()
 			{
@@ -25,7 +28,7 @@ namespace owang
 		}
         public override void Load()
         {
-            instance = this as owang;
+            instance = this as Hsmod;
 
             
             exchangeUIF = new UserInterface();

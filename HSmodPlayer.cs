@@ -9,9 +9,9 @@ using Terraria.GameInput;
 using Terraria.DataStructures;
 using Terraria.ModLoader.IO;
 
-namespace owang
+namespace Hsmod
 {
-    class owangPlayer : ModPlayer
+    class HSmodPlayer : ModPlayer
     {
         public int matterValues { get; set; }
         public override void Load(TagCompound tag)

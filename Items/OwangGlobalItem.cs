@@ -7,13 +7,13 @@ using Terraria;
 using Terraria.ModLoader;
 using owang.UI;
 
-namespace owang.Items
+namespace Hsmod.Items
 {
     class OwangGlobalItem : GlobalItem
     {
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            var info = item.GetModInfo<OwangItemInfo>(owang.instance);
+            var info = item.GetModInfo<OwangItemInfo>(Hsmod.instance);
             if (info.addValueTooltip)
             {
                 ItemValue value = new ItemValue().SetFromCopperValue(item.value * item.stack).ToSellValue();

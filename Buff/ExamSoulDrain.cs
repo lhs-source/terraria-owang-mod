@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace owang.Buff
+namespace Hsmod.Buff
 {
     class ExamSoulDrain : ModBuff
     {

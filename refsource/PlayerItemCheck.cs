@@ -10,7 +10,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace owang.refsource
+namespace Hsmod.refsource
 {
     class PlayerItemCheck : Item
     {

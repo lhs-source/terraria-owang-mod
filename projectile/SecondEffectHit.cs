@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace owang.projectile
+namespace Hsmod.projectile
 {
     class SecondEffectHit : ModProjectile
     {

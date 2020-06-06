@@ -11,7 +11,7 @@ using Terraria.GameContent.UI.Elements;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace owang.UI
+namespace Hsmod.UI
 {
     class ExchangeUI : UIState
     {
@@ -87,7 +87,7 @@ namespace owang.UI
             basePanel.Append(titleText);
 
             // 닫기 버튼 만들어서 basePanel에 붙이기
-            closeBtn = new UIImageButton(owang.instance.GetTexture("UI/closeButton"));
+            closeBtn = new UIImageButton(Hsmod.instance.GetTexture("UI/closeButton"));
             closeBtn.OnClick += (s, e) => { visible = false; };
             closeBtn.Width.Set(20f, 0f);
             closeBtn.Height.Set(20f, 0f);

@@ -10,7 +10,7 @@ using owang.Items;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace owang.UI
+namespace Hsmod.UI
 {
     class UIItemPanel : UIPanel
     {
@@ -96,7 +96,7 @@ namespace owang.UI
             {
                 Main.hoverItemName = item.name;
                 Main.toolTip = item.Clone();
-                Main.toolTip.GetModInfo<OwangItemInfo>(owang.instance).addValueTooltip = true;
+                Main.toolTip.GetModInfo<OwangItemInfo>(Hsmod.instance).addValueTooltip = true;
                 //ItemValue value = new ItemValue().SetFromCopperValue(item.value*item.stack);
                 Main.toolTip.name = $"{Main.toolTip.name}{Main.toolTip.modItem?.mod.Name.Insert((int)Main.toolTip.modItem?.mod.Name.Length, "]").Insert(0, " [")}";
             }
