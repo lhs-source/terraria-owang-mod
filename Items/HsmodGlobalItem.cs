@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
-using owang.UI;
+using Hsmod.UI;
 
 namespace Hsmod.Items
 {
-    class OwangGlobalItem : GlobalItem
+    class HsmodGlobalItem : GlobalItem
     {
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
@@ -21,7 +21,7 @@ namespace Hsmod.Items
             }
         }
     }
-    public class OwangItemInfo : ItemInfo
+    public class HsmodItemInfo : ItemInfo
     {
         public bool addValueTooltip = false;
 

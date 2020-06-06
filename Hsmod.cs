@@ -1,10 +1,9 @@
 using Terraria.ModLoader;
-using owang.Items;
-using owang.UI;
 using Terraria.UI;
 using Terraria.DataStructures;
 using Terraria;
 using System.Collections.Generic;
+using Hsmod.UI;
 
 namespace Hsmod
 {

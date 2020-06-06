@@ -104,5 +104,10 @@ namespace Terraria.Graphics.Shaders
 		{
 			return this;
 		}
-	}
+
+        internal void UseShaderSpecificData(Vector4 vector4)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

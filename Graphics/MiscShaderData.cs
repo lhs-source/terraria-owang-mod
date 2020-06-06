@@ -1,11 +1,13 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Graphics;
 using Terraria.Graphics.Shaders;
 
-namespace Hsmod.Graphics.Shaders
+namespace Hsmod.Graphics
 {
     public class MiscShaderData : ShaderData
     {
@@ -14,9 +16,9 @@ namespace Hsmod.Graphics.Shaders
         private float _uSaturation = 1f;
         private float _uOpacity = 1f;
         private Vector4 _shaderSpecificData = Vector4.Zero;
-        private Texture2D _uImage0;
-        private Texture2D _uImage1;
-        private Texture2D _uImage2;
+        private Ref<Texture2D> _uImage0;
+        private Ref<Texture2D> _uImage1;
+        private Ref<Texture2D> _uImage2;
         private bool _useProjectionMatrix;
 
         public MiscShaderData(Ref<Effect> shader, string passName)
@@ -29,7 +31,7 @@ namespace Hsmod.Graphics.Shaders
             this.Shader.Parameters["uColor"].SetValue(this._uColor);
             this.Shader.Parameters["uSaturation"].SetValue(this._uSaturation);
             this.Shader.Parameters["uSecondaryColor"].SetValue(this._uSecondaryColor);
-            this.Shader.Parameters["uTime"].SetValue(Main.GlobalTimeWrappedHourly);
+            this.Shader.Parameters["uTime"].SetValue(Hsmod.GlobalTimeWrappedHourly);
             this.Shader.Parameters["uOpacity"].SetValue(this._uOpacity);
             this.Shader.Parameters["uShaderSpecificData"].SetValue(this._shaderSpecificData);
             if (drawData.HasValue)
@@ -46,24 +48,24 @@ namespace Hsmod.Graphics.Shaders
                 this.Shader.Parameters["uSourceRect"].SetValue(new Vector4(0.0f, 0.0f, 4f, 4f));
             if (this._uImage0 != null)
             {
-                Main.graphics.GraphicsDevice.Textures[0] = this._uImage0;
+                Main.graphics.GraphicsDevice.Textures[0] = this._uImage0.Value;
                 Main.graphics.GraphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;
-                this.Shader.Parameters["uImageSize0"].SetValue(new Vector2((float)this._uImage0.Width, (float)this._uImage0.Height));
+                this.Shader.Parameters["uImageSize0"].SetValue(new Vector2((float)this._uImage0.Value.Width, (float)this._uImage0.Value.Height));
             }
             if (this._uImage1 != null)
             {
-                Main.graphics.GraphicsDevice.Textures[1] = this._uImage1;
+                Main.graphics.GraphicsDevice.Textures[1] = this._uImage1.Value;
                 Main.graphics.GraphicsDevice.SamplerStates[1] = SamplerState.LinearWrap;
-                this.Shader.Parameters["uImageSize1"].SetValue(new Vector2((float)this._uImage1.Width, (float)this._uImage1.Height));
+                this.Shader.Parameters["uImageSize1"].SetValue(new Vector2((float)this._uImage1.Value.Width, (float)this._uImage1.Value.Height));
             }
             if (this._uImage2 != null)
             {
-                Main.graphics.GraphicsDevice.Textures[2] = this._uImage2;
+                Main.graphics.GraphicsDevice.Textures[2] = this._uImage2.Value;
                 Main.graphics.GraphicsDevice.SamplerStates[2] = SamplerState.LinearWrap;
-                this.Shader.Parameters["uImageSize2"].SetValue(new Vector2((float)this._uImage2.Width, (float)this._uImage2.Height));
+                this.Shader.Parameters["uImageSize2"].SetValue(new Vector2((float)this._uImage2.Value.Width, (float)this._uImage2.Value.Height));
             }
             if (this._useProjectionMatrix)
-                this.Shader.Parameters["uMatrixTransform0"].SetValue(owang.Hsmod.GameViewMatrix.NormalizedTransformationmatrix);
+                this.Shader.Parameters["uMatrixTransform0"].SetValue(Hsmod.GameViewMatrix.NormalizedTransformationmatrix);
             this.Apply();
         }
 
@@ -85,19 +87,22 @@ namespace Hsmod.Graphics.Shaders
 
         public MiscShaderData UseImage0(string path)
         {
-            this._uImage0 = (Asset<Texture2D>)Main.Assets.Request<Texture2D>(path, (AssetRequestMode)1);
+            //this._uImage0 = (Asset<Texture2D>)Main.Assets.Request<Texture2D>(path, (AssetRequestMode)1);
+            this._uImage0 = TextureManager.Retrieve(path);
             return this;
         }
 
         public MiscShaderData UseImage1(string path)
         {
-            this._uImage1 = (Asset<Texture2D>)Main.Assets.Request<Texture2D>(path, (AssetRequestMode)1);
+            //this._uImage1 = (Asset<Texture2D>)Main.Assets.Request<Texture2D>(path, (AssetRequestMode)1);
+            this._uImage1 = TextureManager.Retrieve(path);
             return this;
         }
 
         public MiscShaderData UseImage2(string path)
         {
-            this._uImage2 = (Asset<Texture2D>)Main.Assets.Request<Texture2D>(path, (AssetRequestMode)1);
+            //this._uImage2 = (Asset<Texture2D>)Main.Assets.Request<Texture2D>(path, (AssetRequestMode)1);
+            this._uImage2 = TextureManager.Retrieve(path);
             return this;
         }
 
@@ -144,6 +149,11 @@ namespace Hsmod.Graphics.Shaders
         {
             this._shaderSpecificData = specificData;
             return this;
+        }
+
+        public static implicit operator MiscShaderData(Terraria.Graphics.Shaders.MiscShaderData v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

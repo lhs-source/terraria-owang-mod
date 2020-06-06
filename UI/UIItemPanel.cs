@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.UI;
-using owang.Items;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Hsmod.Items;
 
 namespace Hsmod.UI
 {
@@ -96,7 +92,7 @@ namespace Hsmod.UI
             {
                 Main.hoverItemName = item.name;
                 Main.toolTip = item.Clone();
-                Main.toolTip.GetModInfo<OwangItemInfo>(Hsmod.instance).addValueTooltip = true;
+                Main.toolTip.GetModInfo<HsmodItemInfo>(Hsmod.instance).addValueTooltip = true;
                 //ItemValue value = new ItemValue().SetFromCopperValue(item.value*item.stack);
                 Main.toolTip.name = $"{Main.toolTip.name}{Main.toolTip.modItem?.mod.Name.Insert((int)Main.toolTip.modItem?.mod.Name.Length, "]").Insert(0, " [")}";
             }
